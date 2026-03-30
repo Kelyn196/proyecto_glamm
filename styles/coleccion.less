@@ -1,0 +1,53 @@
+.coleccion {
+  background: @content-primary-background;
+  color: @content-primary-text;
+  padding: 40px 20px;
+
+  h2 {
+    font-size: 32px;
+    color: @primary-background-color;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @media (min-width: 720px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .card {
+    background: @white;
+    border: 1px solid @border-color;
+    border-radius: 10px;
+    padding: 15px; 
+    text-align: center;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      color: @primary-background-color;
+      margin: 10px 0;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+  }
+}
