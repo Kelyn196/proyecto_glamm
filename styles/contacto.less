@@ -1,57 +1,98 @@
 .contacto {
-  background: @content-primary-background;
-  padding: 40px 20px;
-  text-align: center;
+  padding: 80px 20px;
+}
 
-  h2 {
+.contacto h2 {
+  font-size: 56px;
+  color: @primary-background-color;
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.contenido-contacto {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1100px; 
+  margin: auto;
+  align-items: flex-start; 
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.item {
+  background: @white;
+  padding: 32px;
+  border-radius: 10px;
+  border-left: 5px solid @primary-background-color;
+  
+  strong {
     font-size: 32px;
     color: @primary-background-color;
-    margin-bottom: 20px;
-    letter-spacing: 2px; 
-    text-transform: uppercase;
+    display: block;
   }
+  
+  span {
+    font-size: 32px;
+    color: @content-primary-text;
+  }
+}
+
+.lado-derecho {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  text-align: center; 
+  
+  margin-top: 250px; 
+}
+
+.mensaje-redes {
+  margin-bottom: 30px;
 
   p {
-    font-size: 16px;
-    color: @content-primary-text;
-    margin: 8px 0;
-    line-height: 1.6;
-  }
-
-  strong {
-    color: @primary-background-color;
+    font-size: 36px;   
     font-weight: bold;
+    line-height: 1.2;
+    color: @content-primary-text;
+    margin: 0;
   }
 }
 
 .redes-sociales {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;
+  align-items: center;  
 
   a {
-    display: inline-block;
-    text-decoration: none;
-    color: @white;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none; 
+    transition: all 0.3s ease;
+    
+    i {
+      color: #ffffff !important; 
+      font-size: 40px; 
+    }
 
-  .facebook {
-    background: #1877f2;
-  }
+    &.facebook { background: #1877f2; }
+    &.instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+    &.tiktok { background: #000; }
 
-  .instagram {
-    background: #ea83a5;
-  }
-
-  .tiktok {
-    background: #2b2a2a;
-  }
-
-  a:hover {
-    transform: scale(1.1);
-    opacity: 0.9;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
