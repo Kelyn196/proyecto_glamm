@@ -32,17 +32,17 @@
   padding: 20px;
   border-radius: 10px;
   border-left: 5px solid @primary-background-color;
+}
 
-  strong {
-    font-size: 20px;
-    color: @primary-background-color;
-    display: block;
-  }
+.item strong {
+  font-size: 20px;
+  color: @primary-background-color;
+  display: block;
+}
 
-  span {
-    font-size: 18px;
-    color: @content-primary-text;
-  }
+.item span {
+  font-size: 18px;
+  color: @content-primary-text;
 }
 
 .lado-derecho {
@@ -51,15 +51,16 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-
-  background: @white;          
-  padding: 30px;               
-  border-radius: 15px;
-  border-top: 5px solid @primary-background-color;         
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+  background: @white;
+  padding: 30px;
+  border-radius: 20px;
+  border-top: 5px solid @primary-background-color;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   margin-left: 100px;
   margin-top: 80px;
+ 
 }
+
 .mensaje-redes p {
   font-size: 18px;
   font-weight: bold;
@@ -71,28 +72,88 @@
   flex-direction: column;
   gap: 15px;
   align-items: center;
+}
 
-  a {
-    width: 70px;   
-    height: 70px;
-    display: flex;
+.redes-sociales a {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.redes-sociales a i {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.redes-sociales a.facebook {
+  background: #1877f2;
+}
+
+.redes-sociales a.instagram {
+  background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+}
+
+.redes-sociales a.tiktok {
+  background: #000;
+}
+
+.redes-sociales a:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 992px) {
+  .contenido-contacto {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: all 0.3s ease;
+  }
 
-    i {
-      color: #ffffff !important;
-      font-size: 30px; 
-    }
+  .lado-derecho {
+    margin-left: 0;
+    margin-top: 40px;
+    width: 100%;
+  }
 
-    &.facebook { background: #1877f2; }
-    &.instagram { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
-    &.tiktok { background: #000; }
+  .info {
+    width: 100%;
+  }
+}
 
-    &:hover {
-      transform: scale(1.1);
-    }
+@media (max-width: 576px) {
+  .contacto {
+    padding: 40px 15px;
+  }
+
+  .contacto h2 {
+    font-size: 26px;
+  }
+
+  .item {
+    padding: 15px;
+  }
+
+  .item strong {
+    font-size: 18px;
+  }
+
+  .item span {
+    font-size: 16px;
+  }
+
+  .lado-derecho {
+    padding: 20px;
+  }
+
+  .redes-sociales a {
+    width: 55px;
+    height: 55px;
+  }
+
+  .redes-sociales a i {
+    font-size: 24px;
   }
 }
