@@ -1,3 +1,27 @@
 body {
   margin: 0;
 }
+
+.btn-flotante {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: @primary-background-color;
+  color: #fff;
+  font-size: 22px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.btn-flotante:hover {
+  background: #333;
+  transform: scale(1.1);
+}
